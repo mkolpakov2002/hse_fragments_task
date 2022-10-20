@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_first">
+
+    <fragment
+        android:id="@+id/navigation_first"
+        android:name="ru.hse.miem.fragments.ui.first.FirstFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_navigation_first_to_navigation_second"
+            app:destination="@id/navigation_second" />
+        <action
+            android:id="@+id/action_navigation_first_to_navigation_third"
+            app:destination="@id/navigation_third" />
+        <action
+            android:id="@+id/action_navigation_first_to_navigation_fourth"
+            app:destination="@id/navigation_fourth" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_second"
+        android:name="ru.hse.miem.fragments.ui.second.SecondFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_navigation_second_to_navigation_first"
+            app:destination="@id/navigation_first" />
+        <action
+            android:id="@+id/action_navigation_second_to_navigation_third"
+            app:destination="@id/navigation_third" />
+        <action
+            android:id="@+id/action_navigation_second_to_navigation_first2"
+            app:destination="@id/navigation_first" />
+        <action
+            android:id="@+id/action_navigation_second_to_navigation_third2"
+            app:destination="@id/navigation_third" />
+        <action
+            android:id="@+id/action_navigation_second_to_navigation_fourth"
+            app:destination="@id/navigation_fourth" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_third"
+        android:name="ru.hse.miem.fragments.ui.third.ThirdFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_third" >
+        <action
+            android:id="@+id/action_navigation_third_to_navigation_second"
+            app:destination="@id/navigation_second" />
+        <action
+            android:id="@+id/action_navigation_third_to_navigation_fourth"
+            app:destination="@id/navigation_fourth" />
+        <action
+            android:id="@+id/action_navigation_third_to_navigation_first"
+            app:destination="@id/navigation_first" />
+        <action
+            android:id="@+id/action_navigation_third_to_navigation_second2"
+            app:destination="@id/navigation_second" />
+        <action
+            android:id="@+id/action_navigation_third_to_navigation_fourth2"
+            app:destination="@id/navigation_fourth" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_fourth"
+        android:name="ru.hse.miem.fragments.ui.fourth.FourthFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_fourth" >
+        <action
+            android:id="@+id/action_navigation_fourth_to_navigation_third"
+            app:destination="@id/navigation_third" />
+        <action
+            android:id="@+id/action_navigation_fourth_to_navigation_first"
+            app:destination="@id/navigation_first" />
+        <action
+            android:id="@+id/action_navigation_fourth_to_navigation_second"
+            app:destination="@id/navigation_second" />
+    </fragment>
+</navigation>
