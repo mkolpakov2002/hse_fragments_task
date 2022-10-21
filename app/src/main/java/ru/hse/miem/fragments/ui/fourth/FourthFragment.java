@@ -50,7 +50,9 @@ public class FourthFragment extends Fragment {
         final MaterialButton buttonPrev = binding.button4;
 
         final TextView textViewAnswer = binding.answer;
-        textViewAnswer.setText(solved()+Float.toString(listener.getAnswer()));
+        if(listener.getOperationCode()==Constants.delCode)
+            textViewAnswer.setText(solved()+ listener.getAnswer());
+        else textViewAnswer.setText(solved()+((int) listener.getAnswer()));
 
         buttonPrev.setOnClickListener(new View.OnClickListener() {
             @Override
