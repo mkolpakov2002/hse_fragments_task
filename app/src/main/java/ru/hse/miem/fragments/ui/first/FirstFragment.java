@@ -37,15 +37,13 @@ public class FirstFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        FirstViewModel homeViewModel =
-                new ViewModelProvider(this).get(FirstViewModel.class);
 
         binding = FragmentFirstBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHome;
+
         final MaterialButton buttonNext = binding.button4;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
         if(listener.getFirstNumber()!=null)
             binding.editText.setText(String.valueOf(listener.getFirstNumber()));
         binding.editText.addTextChangedListener(new TextWatcher() {

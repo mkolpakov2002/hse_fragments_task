@@ -23,7 +23,6 @@ import ru.hse.miem.fragments.R;
 import ru.hse.miem.fragments.databinding.FragmentFirstBinding;
 import ru.hse.miem.fragments.databinding.FragmentFourthBinding;
 import ru.hse.miem.fragments.ui.ActivityCommunicate;
-import ru.hse.miem.fragments.ui.first.FirstViewModel;
 
 public class FourthFragment extends Fragment {
 
@@ -43,15 +42,13 @@ public class FourthFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        FourthViewModel homeViewModel =
-                new ViewModelProvider(this).get(FourthViewModel.class);
 
         binding = FragmentFourthBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textFourth;
+
         final MaterialButton buttonPrev = binding.button4;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
         final TextView textViewAnswer = binding.answer;
         textViewAnswer.setText(solved()+Float.toString(listener.getAnswer()));
 

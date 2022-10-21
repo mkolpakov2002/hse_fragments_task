@@ -36,8 +36,6 @@ public class SecondFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        SecondViewModel homeViewModel =
-                new ViewModelProvider(this).get(SecondViewModel.class);
 
         binding = FragmentSecondBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
@@ -45,7 +43,6 @@ public class SecondFragment extends Fragment {
         final TextView textView = binding.textSecond;
         final MaterialButton buttonNext = binding.button4;
         final MaterialButton buttonPrev = binding.button6;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         if(listener.getSecondNumber()!=null)
             binding.editTextSecond.setText(String.valueOf(listener.getSecondNumber()));
         binding.editTextSecond.addTextChangedListener(new TextWatcher() {

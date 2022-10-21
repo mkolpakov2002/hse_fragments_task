@@ -49,8 +49,6 @@ public class ThirdFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        ThirdViewModel homeViewModel =
-                new ViewModelProvider(this).get(ThirdViewModel.class);
 
         binding = FragmentThirdBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
